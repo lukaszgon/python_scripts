@@ -3,7 +3,6 @@ Script enables to search for specific strings within directory's files
 """
 
 import os
-import sys
 import argparse
 
 # python search_for.py  -n arg1 -e arg2
