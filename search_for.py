@@ -9,6 +9,7 @@ import argparse
 # default test strings
 search_string = 'import'
 ending = '.py'
+results_num = 0
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-n', action='store', dest='search_string')
@@ -28,4 +29,9 @@ for elem in dir_list:
         file_data = curr_file.read()
         if search_string in file_data:
             print('{} found in:   '.format(search_string), file_name, '\n')
+            results_num += 1
         curr_file.close()
+if results_num is 1:
+    print(results_num, 'result was found')
+else:
+    print(results_num, 'results were found')
